@@ -1,0 +1,5 @@
+python-telegram-bot==20.3
+google-generativeai==0.3.2
+aiohttp
+aiosqlite
+stripe; python_version >= '3.8'
