@@ -230,7 +230,7 @@ async def generate_image_from_prompt(prompt: str, size: str = "1024x1024"):
     if hasattr(resp, "binary") and isinstance(resp.binary, (bytes, bytearray)):
         return bytes(resp.binary)
 
-    raise ValueError("Image generation returned unknown response format. Check genai library version.")
+    raise ValueError("Image generation returned unknown response format. Please verify that the Google Generative AI library supports image generation and check the model configuration.")
 
 def split_text_chunks(text: str, limit: int = 4096):
     return [text[i:i+limit] for i in range(0, len(text), limit)]
